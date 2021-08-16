@@ -36,3 +36,5 @@ C:\Users\zande\source\repos\DevCard\DevCard_MVC\obj\Debug\netcoreapp3.1\DevCard_
 C:\Users\zande\source\repos\DevCard\DevCard_MVC\obj\Debug\netcoreapp3.1\DevCard_MVC.genruntimeconfig.cache
 C:\Users\zande\source\repos\DevCard\DevCard_MVC\obj\Debug\netcoreapp3.1\DevCard_MVC.csproj.CopyComplete
 C:\Users\zande\source\repos\DevCard\DevCard_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contact.cshtml.g.cs
+C:\Users\zande\source\repos\DevCard\DevCard_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Home\Components\Projects\_Projects.cshtml.g.cs
+C:\Users\zande\source\repos\DevCard\DevCard_MVC\obj\Debug\netcoreapp3.1\Razor\Views\Home\Components\LatestArticles\_LatestArticles.cshtml.g.cs
