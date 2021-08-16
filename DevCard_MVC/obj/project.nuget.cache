@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "x9Q1pIHRFxweCe4d8ZC6gyJOdN8fisbDSTEJJmlZ10qgX5CXuqjCX+sv7OCnNAizYqOCa4xnmZe4830ylUZ7Mw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zande\\source\\repos\\DevCard\\DevCard_MVC\\DevCard_MVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zande\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}
