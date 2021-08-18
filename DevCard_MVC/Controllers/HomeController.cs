@@ -20,9 +20,9 @@ namespace DevCard_MVC.Controllers
         }
 
         [HttpPost]
-        public void Contact(IFormCollection form)
+        public void Contact(Contact formContact)
         {
-            string Name = form["name"];
+            var name = formContact.Name;
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
