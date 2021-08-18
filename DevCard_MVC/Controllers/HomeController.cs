@@ -1,12 +1,22 @@
-﻿using DevCard_MVC.Models;
+﻿using System.Collections.Generic;
+using DevCard_MVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DevCard_MVC.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly List<Service> _services = new List<Service>
+        {
+            new Service(1, "طلایی"),
+            new Service(2, "نقره ای"),
+            new Service(3, "پلاتینی"),
+            new Service(4, "الماسی"),
+        };
+
         public IActionResult Index()
         {
             return View();
@@ -16,7 +26,10 @@ namespace DevCard_MVC.Controllers
         [HttpGet]
         public IActionResult Contact()
         {
-            var model=new Contact();
+            var model = new Contact()
+            {
+                Services = new SelectList(_services, "Id", "Name")
+            };
             return View(model);
         }
 
@@ -25,9 +38,16 @@ namespace DevCard_MVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                model = new Contact()
+                {
+                    Services = new SelectList(_services, "Id", "Name")
+                };
+                ModelState.Clear();
                 ViewBag.success = "نظر شما با موفقیت ارسال شد.باتشکر";
-                return View();
+                return View(model);
             }
+
+            model.Services = new SelectList(_services, "Id", "Name");
             ViewBag.error = "مشکلی رخ داده است دوباره تلاش کنید.";
             return View(model);
         }
