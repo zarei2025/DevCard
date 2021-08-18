@@ -16,13 +16,15 @@ namespace DevCard_MVC.Controllers
         [HttpGet]
         public IActionResult Contact()
         {
-            return View();
+            var model=new Contact();
+            return View(model);
         }
 
         [HttpPost]
-        public void Contact(Contact formContact)
+        public JsonResult Contact(Contact formContact)
         {
             var name = formContact.Name;
+            return Json(Ok());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
