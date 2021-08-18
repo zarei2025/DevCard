@@ -21,10 +21,15 @@ namespace DevCard_MVC.Controllers
         }
 
         [HttpPost]
-        public JsonResult Contact(Contact formContact)
+        public IActionResult Contact(Contact model)
         {
-            var name = formContact.Name;
-            return Json(Ok());
+            if (ModelState.IsValid)
+            {
+                ViewBag.success = "نظر شما با موفقیت ارسال شد.باتشکر";
+                return View();
+            }
+            ViewBag.error = "مشکلی رخ داده است دوباره تلاش کنید.";
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
